@@ -1,0 +1,17 @@
+import requests
+
+url = "www.example.com:8080"
+
+files = [
+  ('file1',('test1.csv',open('test1.csv','rb'),'csv')),
+  ('file2',('test2.csv',open('test2.csv','rb'),'csv)),
+]
+  #three parameter of the tuple
+  #first:identifier
+  #second:filename  , and the format of file is using function open('filename','type to open file) ,and the type of file
+
+r = requests(url,files)
+
+print(r.statuscode)
+print(r.text)
+
